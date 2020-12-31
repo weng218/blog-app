@@ -1,6 +1,6 @@
 # A React Blogging App
 
-###A Blogging web application using:
+### A Blogging web application using:
 
 * create-react-app
 * styled-components
