@@ -7,4 +7,7 @@
 * react-transition-group
 * redux
 * react-redux
+* react-immutable
+* redux-thunk
+* axios
 
