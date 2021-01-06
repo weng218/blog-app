@@ -1,0 +1,34 @@
+{
+	"success": true,
+	"data": {
+		"topicList": [{
+			"id": 1,
+			"title": "Politics",
+			"imgURL": "https://www.grassociation.org/images/HomePage/DC%20Callout.jpg"
+		},{"id": 2,
+			"title": "Painting",
+			"imgURL": "https://images-na.ssl-images-amazon.com/images/I/71IKf0VNAbL._AC_SL1500_.jpg"
+		}],
+		"articleList": [{
+			"id": 1,
+			"title": "Biden criticises Trump’s latest efforts to undermine election",
+			"desc": "Biden spoke in Georgia ahead of the runoff elections tomorrow and criticised Republican senator’s loyalty to Trump",
+			"imgURL": "https://deadline.com/wp-content/uploads/2021/01/biden-georgia-jan-4.jpg?w=681&h=383&crop=1"
+		},{
+			"id": 2,
+			"title": "Biden criticises Trump’s latest efforts to undermine election",
+			"desc": "Biden spoke in Georgia ahead of the runoff elections tomorrow and criticised Republican senator’s loyalty to Trump",
+			"imgURL": "https://deadline.com/wp-content/uploads/2021/01/biden-georgia-jan-4.jpg?w=681&h=383&crop=1"
+		},{
+			"id": 3,
+			"title": "Biden criticises Trump’s latest efforts to undermine election",
+			"desc": "Biden spoke in Georgia ahead of the runoff elections tomorrow and criticised Republican senator’s loyalty to Trump",
+			"imgURL": "https://deadline.com/wp-content/uploads/2021/01/biden-georgia-jan-4.jpg?w=681&h=383&crop=1"
+		},{
+			"id": 4,
+			"title": "Biden criticises Trump’s latest efforts to undermine election",
+			"desc": "Biden spoke in Georgia ahead of the runoff elections tomorrow and criticised Republican senator’s loyalty to Trump",
+			"imgURL": "https://deadline.com/wp-content/uploads/2021/01/biden-georgia-jan-4.jpg?w=681&h=383&crop=1"
+		}]
+	}
+}

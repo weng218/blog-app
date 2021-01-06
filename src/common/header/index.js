@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
 import {
@@ -65,7 +66,9 @@ class Header extends Component {
 		const { focused, list, handleInputFocus, handleInputBlur } = this.props;
 		return (
 			<HeaderWrapper>
-				<Logo href='/'/>
+				<Link to='/'>
+					<Logo />
+				</Link>
 				<Nav>
 					<NavItem className= 'left active'>Home</NavItem>
 					<NavItem className= 'left'>Download App</NavItem>
@@ -116,7 +119,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		handleInputFocus (list) {
-			if (list.size == 0) {
+			if (list.size === 0) {
 				dispatch(actionCreators.getList());
 			}
 			dispatch(actionCreators.searchBarFocus());
