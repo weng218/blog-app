@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
+import { actionCreators as loginActionCreators } from '../../pages/login/store'
 import {
 	HeaderWrapper,
 	Logo,
@@ -63,7 +64,7 @@ class Header extends Component {
 	}
 
 	render () {
-		const { focused, list, handleInputFocus, handleInputBlur } = this.props;
+		const { focused, list, handleInputFocus, handleInputBlur, login, logout } = this.props;
 		return (
 			<HeaderWrapper>
 				<Link to='/'>
@@ -72,7 +73,10 @@ class Header extends Component {
 				<Nav>
 					<NavItem className= 'left active'>Home</NavItem>
 					<NavItem className= 'left'>Download App</NavItem>
-					<NavItem className= 'right'>Login</NavItem>
+					{
+						login ? <NavItem onClick={logout} className= 'right'>Log Out</NavItem> : 
+							<Link to='/login'><NavItem className= 'right'>Login</NavItem></Link>
+					}
 					<NavItem className= 'right'>Aa</NavItem>
 					<SearchWrapper>
 						<CSSTransition
@@ -91,10 +95,12 @@ class Header extends Component {
 					</SearchWrapper>
 				</Nav>
 				<Addition>
-					<Button className='compose'>
-						<span className="iconfont">&#xe627;</span>
-						Compose
-					</Button>
+					<Link to='/write'>
+						<Button className='compose'>
+							<span className="iconfont">&#xe627;</span>
+							Compose
+						</Button>
+					</Link>
 					<Button className= 'register'>Register</Button>
 				</Addition>
 			</HeaderWrapper>
@@ -110,8 +116,8 @@ const mapStateToProps = (state) => {
 		list : state.getIn(['header','list']),
 		page: state.getIn(['header','page']),
 		mouseIn: state.getIn(['header','mouseIn']),
-		totalPage: state.getIn(['header','totalPage'])
-
+		totalPage: state.getIn(['header','totalPage']),
+		login: state.getIn(['login','login'])
 	}
 
 }
@@ -147,6 +153,9 @@ const mapDispatchToProps = (dispatch) => {
 				dispatch(actionCreators.pageChange(1));
 			}
 			
+		},
+		logout(){
+			dispatch(loginActionCreators.logout());
 		}
 
 	}

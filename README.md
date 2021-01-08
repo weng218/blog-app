@@ -10,4 +10,6 @@
 * react-immutable
 * redux-thunk
 * axios
+* react-router
+* react-loadable
 
